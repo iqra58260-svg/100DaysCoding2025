@@ -11,8 +11,8 @@ public class EVALUASI2 {
         System.out.print("Masukkan Lebar Rumah: ");
         int lebar = input.nextInt();
         
-        int keramik = panjang*lebar;
-        int hasilakhir = keramik / 4;
+        int hasil = panjang*lebar;
+        int hasilakhir = hasil / 4;
         
         System.out.println("Total Keramik yang digunakan: "+hasilakhir);
         
@@ -24,16 +24,16 @@ public class EVALUASI2 {
         int b = input.nextInt();
         
         System.out.println("SEBELUM");
-        System.out.println("Nilai Variabel B: "+a);
-        System.out.println("Nilai Variabel A: "+b);
+        System.out.println("Nilai Variabel A: "+a);
+        System.out.println("Nilai Variabel B: "+b);
         
         a = a + b;
         b = a - b;
         a = a - b;
         
         System.out.println("SESUDAH");
-        System.out.println("Nilai Variabel B: "+a);
-        System.out.println("Nilai Variabel A: "+b);
+        System.out.println("Nilai Variabel A: "+a);
+        System.out.println("Nilai Variabel B: "+b);
     }
     
 }
