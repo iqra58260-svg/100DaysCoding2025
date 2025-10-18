@@ -1,0 +1,161 @@
+package eval3;
+
+import java.util.Scanner;
+
+public class Eval3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan Nama Anda: ");
+     String nama = input.nextLine();
+        System.out.print("Masukkan Umur Anda: ");
+     int umur = input.nextInt();
+        System.out.print("Masukkan Kelas Anda: ");
+     char kelas = input.next().charAt(0);
+        
+        System.out.println("Nama: "+nama);
+        System.out.println("Umur: "+umur);
+        System.out.println("Kelas Informatika: "+kelas);
+        
+        
+    }
+    
+}
+
+package eval3;
+
+import java.util.Scanner;
+
+public class soal2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.print("Masukkan nama pengguna: ");
+        String inputString = input.nextLine();
+        System.out.print("Masukkan angka dalam bentuk String: ");
+        String angka = input.nextLine();
+        int akhir = Integer.valueOf(angka);
+         akhir++;
+         akhir--;
+         akhir += 6;
+         akhir -= 3
+                 ;
+         
+        String akhir2 = String.valueOf(akhir);
+        
+         System.out.println("Nama: "+inputString);
+         System.out.println("Nilai akhir (int): "+akhir);
+         System.out.println("Nilai akhir (String): "+akhir2);
+    }
+ 
+}
+
+
+package eval3;
+
+import java.util.Scanner;
+
+public class soal3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.println("=== Pilih Bangun Datar ===");
+        System.out.println("1. Persegi");
+        System.out.println("2. Persegi Panjang");
+        System.out.println("3. Lingkaran");
+        System.out.print("Masukkan pilihan: ");
+        double pilihan = input.nextInt();
+        
+        
+        if (pilihan == 3){
+           System.out.print("Masukkan sisi: ");
+        double sisi = input.nextInt();
+        double pi = 3.14;
+        double luas = sisi * pi;
+            System.out.print("Luas Bangun: "+luas);
+        }else if (pilihan == 2) {
+            System.out.print("Masukkan Panjang: ");
+            int p = input.nextInt();
+            System.out.print("Masukkan Lebar: ");
+            int l = input.nextInt();
+            
+            int luas = p * l;
+            System.out.println("Luas Persegi Panjang: "+ luas);
+        }else {
+            System.out.print("Masukkan Sisi: ");
+            int p = input.nextInt();
+            
+            int luas = p * p;
+            System.out.println("Luas Persegi: "+ luas);
+        }
+        
+    }
+}
+
+package eval3;
+
+import java.util.Scanner;
+
+public class soal4 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan nama kasir: ");
+        String nama = input.nextLine();
+        System.out.print("Masukkan harga barang (Rp): ");
+        double harga = input.nextInt();
+        double diskon = 0;
+
+        System.out.println("Kasir: " + nama);
+        if (harga < 500000) {
+            System.out.println("Harga Barang :" + harga);
+            System.out.println("Total Bayar :" + harga);
+
+        } else if (harga > 1000000) {
+            System.out.println("Harga Barang :" + harga);
+
+            diskon = (harga * 20) / 100;
+            System.out.println("Diskon (20.0%) : " + diskon);
+            System.out.println("Total Bayar :" + (harga - diskon));
+
+        } else if (harga >= 500000) {
+            System.out.println("Harga Barang :" + harga);
+
+            diskon = (harga * 10) / 100;
+            System.out.println("Diskon (10.0%) : " + diskon);
+            System.out.println("Total Bayar :" + (harga - diskon));
+
+        }
+    }
+}
+
+
+package eval3;
+
+import java.util.Scanner;
+
+public class soal {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.print("Masukkan nama siswa: ");
+        String nama = input.nextLine();
+        System.out.print("Masukkan nilai siswa: ");
+        int nilai = input.nextInt();
+    
+        if (nilai <60){
+            System.out.println("Siswa : "+nama+" Tidak lulus");
+        }else if(nilai < 75){
+            System.out.println("Siswa : "+nama+" Cukup");  
+        
+        }else if(nilai < 90){
+            System.out.println("Siswa : "+nama+" Cukup");
+        }else {
+            System.out.println("Siswa : "+nama+" Sangat Baik");
+        }
+       
+        if(nilai %2==0){
+        System.out.println("Nilai genap");
+            
+        }else {
+            System.out.println("Nilai ganjil");
+        }
+    }
+}
