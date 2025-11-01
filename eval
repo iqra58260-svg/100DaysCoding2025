@@ -1,0 +1,59 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pkg100days;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Iqra
+ */
+public class eval {
+    public static void main(String[] args) {
+               Scanner input = new Scanner(System.in);
+        System.out.print("Batas Bawah : ");
+        int b = input.nextInt();
+        System.out.print("Batas Atas : ");
+        int a = input.nextInt();
+        System.out.print("Angka : ");
+        int c = input.nextInt();
+        String d = (c<=a && c>=b)? "YAYAYAYA":"NONNONO";
+        System.out.println(d);
+        
+    }
+    
+}
+
+//Soal 2
+public class Soal2 {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Batas Bawah : ");
+        int a = input.nextInt();
+        String b = (a>70)? "Ujian Kroco Ji Pale":"Sa Jappo’ka Aih";
+        System.out.println(b);
+        
+    }
+    
+}
+
+//Soal 3
+public class Soal3 {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Batas Bawah : ");
+        int a = input.nextInt();
+        String b = (a%2 == 0)? "Iyaji":"Tidakji";
+        System.out.println(b);
+        
+    }
+    
+}
+    }
+}
