@@ -22,4 +22,5 @@ public class Days058 {
             j--;
         } while (j >= 1);
     }
+
 }
