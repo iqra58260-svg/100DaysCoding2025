@@ -1,0 +1,187 @@
+//SOAL 1
+
+
+package pkg100days;
+
+import java.util.Scanner;
+
+public class evall {
+    
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner (System.in);
+//        System.out.print("Masukkan Angka Bom: ");
+        int bom = 55;
+        int min = 0;
+        int max = 100;
+        
+        for (int i = 0; i <= 100; i++) {
+            System.out.print("Masukkan Angka "+ min+"-"+max +": ");
+            int angka = input.nextInt();
+            
+            if (angka > min && angka < bom){
+                min = angka;
+            }else if (angka < max&& angka > bom){
+                max = angka;
+            }else if (angka == bom){
+                System.out.println("Bom");
+                break;
+            }else{
+                System.out.println("ANGKA TIDAK SESUAI");
+            } 
+        }input.close();
+        
+        
+        
+    }
+}
+
+
+
+//SOAL 2
+
+
+package pkg100days;
+
+import java.util.Scanner;
+
+public class evalsoal2 {
+    
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner (System.in);
+        System.out.print("Masukkan Nilai Anda: ");
+        int nilai = input.nextInt();
+        
+        if (nilai >= 90 && nilai <= 100){
+            System.out.println("A");
+        }else if(nilai >= 80 && nilai < 90){
+            System.out.println("B");
+        }else if (nilai >= 70 && nilai < 80){
+            System.out.println("C");
+        }else if (nilai >= 60 && nilai < 70){
+            System.out.println("D");
+        }else if (nilai >= 0 && nilai < 60){
+            System.out.println("E");
+        }
+    }
+}
+
+
+//SOAL 3
+
+
+package pkg100days;
+
+import java.util.Scanner;
+
+public class evalsoal3 {
+   
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner (System.in);
+        
+        int langkah = 0;
+        for (int i = 0; i < 100; i++) {
+            
+        System.out.print("Masukkan Perintah: ");
+        String perintah = input.next();
+        
+        if("maju".equalsIgnoreCase(perintah)){
+            langkah += 1;
+            System.out.println(langkah);
+
+        }else if ("mundur".equalsIgnoreCase(perintah)){
+            langkah -= 1;
+            System.out.println(langkah);
+        }else if ("stop".equalsIgnoreCase(perintah)){
+            System.out.println("Berhenti jangan lanjut!!");
+            break;
+        }
+        }
+    }
+}
+
+
+
+//SOAL 4
+
+package pkg100days;
+
+import java.util.Scanner;
+
+public class evalsoal4 {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner (System.in);
+        
+        int totalnilai = 0;
+        int jumlahnilai = 0;
+        int jumlahnilaitidak = 0;
+        int terbesar = -1;
+        int terendah = 101;
+        
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Masukkan Nilai: ");
+            int nilai = input.nextInt();
+            if (nilai >= 0 && nilai <=100){
+                totalnilai += nilai;
+                jumlahnilai++;
+                
+            if (nilai > terbesar){
+                terbesar = nilai;
+            }
+                
+            if (nilai < terendah){
+                terendah = nilai;
+            }
+            } else {
+                jumlahnilaitidak++;
+            }     
+        }        
+            System.out.println("total nilai: "+totalnilai);
+            System.out.println("jumlah nilai: "+jumlahnilai);
+            System.out.println("jumlah nilai tidak valid "+jumlahnilaitidak);
+            System.out.println("terbesar: "+terbesar);
+            System.out.println("terendah: "+terendah);
+    }
+    
+}
+
+
+
+//SOAL 5
+
+package pkg100days;
+
+import java.util.Scanner;
+
+public class evalsoal5 {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner (System.in);
+        int hasil = 1;
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Masukkan Angka: ");
+            int angka = input.nextInt();
+            char oper = input.next().charAt(0);
+            int angka1 = input.nextInt();
+            
+            if (oper == '*'){
+                hasil = angka * angka1;
+            }else if (oper == '+'){
+                hasil = angka + angka1;
+            }else if (oper == '-'){
+                hasil = angka - angka1;
+            }else if (oper == '/'){
+                hasil = angka / angka1;
+            }else if(oper == '%'){
+                hasil = angka%angka1;
+                        
+        }System.out.println("Hasil dari "+angka+" "+oper+" "+angka1 +" adalah "+hasil);
+        }
+    }
+    
+}
